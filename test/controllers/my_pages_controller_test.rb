@@ -11,4 +11,10 @@ class MyPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get mild" do
+    get my_pages_mild_url
+    assert_response :success
+    assert_select "title", "Mild | Ruby on Rails Tutorial Sample App"
+  end
+
 end
