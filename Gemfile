@@ -5,8 +5,11 @@ ruby '2.7.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails',                      '6.0.4'
-# Use Puma as the app server
+gem 'mysql2',                     '0.5.4'
+# Use sqlite3 as the database for Active Record
+# gem 'sqlite3',                  '1.4.2'
 gem 'bootstrap-sass',             '3.4.1'
+# Use Puma as the app server
 gem 'puma',                       '4.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails',                 '5.1.0'
@@ -28,8 +31,6 @@ gem 'bootsnap',                   '1.10.3', require: false
 
 
 group :development,               :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3',                  '1.4.2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug',                   '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -58,7 +59,7 @@ end
 
 group :production do
   # gem 'pg',                       '1.1.4'
-  gem 'mysql2',                     '0.5.4'
+  # gem 'mysql2',                     '0.5.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
