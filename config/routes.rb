@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'my_pages/cool'
   get 'my_pages/hot'
   get 'my_pages/mild'
+  resources :users
 
 end
